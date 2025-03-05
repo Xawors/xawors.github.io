@@ -659,66 +659,121 @@ section{
         margin-top: 40px;
     }
 }
-@media screen and (max-width: 600px) {
-    header {
-        padding: 10px;
+@media (max-width:1040px) {
+    
+    header{
+        padding: 12px 20px;
     }
 
-    .navigation {
+    header.sticky{
+        padding: 10px 20px;
+    }
+
+    header .navigation{
         display: none;
-        flex-direction: column;
-        align-items: center;
     }
 
-    .navigation.active {
+    .navigation.active{
+        z-index: 889;
+        position: fixed;
+        background-color: white;
+        top: 0;
+        right: 0;
+        width: 380px;
+        height: 100%;
         display: flex;
-    }
-
-    .navigation a {
-        margin-bottom: 15px;
-    }
-
-    .menu-btn {
-        display: block;
-        cursor: pointer;
-        font-size: 30px;
-        margin-left: auto;
-    }
-
-    .media-icons {
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        flex-direction: column;
+        box-shadow: 0 5px 25px rgba(1 1 1/ 15%);
+        transition: 0.3s ease;
     }
 
-    .media-icons a {
-        font-size: 20px;
+    header .navigation a{
+        color: black;
+        font-size: 1.2em;
+        margin: 10px;
+        padding: 10px 40px;
+        border-radius: 5px;
     }
 
-    .main .content h2 {
-        font-size: 24px;
+    header .navigation a:hover{
+        background-color: #3a6cf4;
+        color: white;
+        transition: 0.3s ease;
     }
 
-    .main .content h3 {
-        font-size: 20px;
-    }
-}
-(max-width: 768px) */
-@media screen and (max-width: 768px) {
-    header {
-        padding: 15px;
-    }
-
-    .navigation {
-        justify-content: space-between;
-    }
-
-    .main .content h2 {
-        font-size: 28px;
+    .menu-btn{
+        position: absolute;
+        background-image: url(Image/menu.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        margin: 0 20px;
+        cursor: pointer;
+        transition: 0.3s ease;
     }
 
-    .main .content h3 {
-        font-size: 22px;
+    .menu-btn.active{
+        z-index: 999;
+        background-image: url(Image/close.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 25px;
+        transition: 0.3s ease;
+        filter: invert(1);
     }
+
+    section{
+        padding: 80px 20px;
+    }
+
+    .main .content h2{
+        font-size: 1em;
+    }
+
+    .animated-text h3{
+        font-size: 2.2em;
+    }
+
+    .section-title{
+        font-size: 1.8em;
+    }
+
+    .about .content{
+        flex-direction: column;
+    }
+
+    .about .content .column{
+        width: 100%;
+        position: relative;
+    }
+
+    .about .content .col-right{
+        margin-top: 40px;
+    }
+
+    /* Skills */
+
+    .skills .content{
+        flex-direction: column;
+    }
+
+    .skills .content .column{
+        position: relative;
+        width: 100%;
+    }
+
+    .skills .content .col-right{
+        margin-top: 40px;
+    }
+ 
+    .contact-form{
+        padding: 35px 40px;
+      }
 }
 
 
